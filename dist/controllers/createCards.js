@@ -38,7 +38,7 @@ const deleteCard = (req, res) => {
         if (!user) {
             throw new Error("Такой карточки нет");
         }
-        return Promise.all(user.cardsWithLang.map((card) => Cards_1.Cards.findById(card).then((card) => card.toObject())));
+        return Promise.all(user.cardsWithLang.map((card) => Cards_1.Cards.findById(card).then((card) => card === null || card === void 0 ? void 0 : card.toObject())));
     })
         .then((cardsWithLang) => {
         res.status(200).json({ message: "Карточка удалена", cardsWithLang });

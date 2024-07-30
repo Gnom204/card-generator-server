@@ -41,7 +41,7 @@ export const deleteCard = (req: Request, res: Response) => {
       }
       return Promise.all(
         user.cardsWithLang.map((card) =>
-          Cards.findById(card).then((card) => card.toObject())
+          Cards.findById(card).then((card) => card?.toObject())
         )
       );
     })
