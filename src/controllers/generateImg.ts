@@ -88,8 +88,8 @@ class Text2ImageAPI {
 export const mainGenerate = async (prompt: string) => {
   const api = new Text2ImageAPI(
     "https://api-key.fusionbrain.ai/",
-    "BED0EF10AAE9CCBAE91491C7CF0AE2E8",
-    "B5879783D8A887189954E38000F258D0"
+    "D63C436F686AE616B923D54F3988C51E",
+    "FAC9F82D66906FDC91EABC1F4CC20E17"
   );
   const modelId = await api.getModels();
   const uuid = await api.generate(prompt, modelId, 1, 1024, 1024);
